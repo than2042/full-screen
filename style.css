@@ -7,19 +7,21 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.welcome {
+  margin: 30px 0 30px 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
 
 .gallery {
   color: tomato;
 }
 
-.carouselContainer {
+.thumbContainer {
   position: relative;
   width: 90%;
   margin: auto;
   overflow: hidden;
-}
-
-.carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -35,44 +37,110 @@ img {
   min-height: 100%;
 }
 
-.left {
+.left,
+.right {
   left: 0;
   opacity: 1;
+  color: #f0f8ff;
 }
-.right {
-  right: 0;
-  opacity: 1;
+
+button {
+  border: none;
 }
 
 .iconContainer {
   display: flex;
   justify-content: center;
-  gap: 14.5rem;
+  background-color: transparent;
+  gap: 14rem;
   position: absolute;
-  top: 42%;
-  padding: 0 1rem;
+  top: 60%;
+  padding: 0 1.9rem;
 }
+
+#searchImg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
+.queryInput {
+  position: absolute;
+  bottom: 25rem;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  padding: 0 30px;
+}
+
+.display {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
-  .thumbnail {
+  .welcome {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    color: #3498db;
+  }
+
+  .thumbContainer {
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    height: 6rem;
+    overflow: hidden;
   }
 
-  .thumbnail img {
-    width: 100px;
-    padding: 5px;
-    border: 1px solid transparent;
+  .thumbnail:focus {
+    border: 5px solid tomato;
   }
 
-  #displayImage {
-    width: 100%;
-    height: 100vh;
+  .display {
+    max-height: 50rem;
+    margin-top: 10px;
+    display: block;
   }
-  /* img {
-    
-  } */
+
+  .queryInput {
+    bottom: 20rem;
+    width: 25rem;
+    height: 3rem;
+  }
+
+  .iconContainer {
+    display: none;
+  }
+
+  .description {
+    text-align: center;
+    position: absolute;
+    top: 30rem;
+    margin: auto;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: #054b7a;
+    left: 4rem;
+    height: 6rem;
+    padding: 20px 40px;
+    background: #c0fcfc;
+    border-radius: 30px 10px 30px 10px;
+  }
+  .skip {
+    display: none;
+    width: 10rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 0 4rem;
+    background: #c0fcfc;
+    font-size: 1rem;
+  }
 }

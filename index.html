@@ -14,26 +14,30 @@
   </head>
   <body>
     <div id="galleryContainer">
+      <button
+        id="skipContent"
+        class="skip"
+        tabindex="0"
+        onclick="skipContent()"
+      >
+        Skip to Content
+      </button>
       <h1 class="welcome">Welcome to <span class="gallery">Gallery!!</span></h1>
-
-      <div class="carouselContainer">
-        <div class="carousel">
-          <div id="thumbnail" class="carouselSlide"></div>
-        </div>
-        <div class="iconContainer">
-          <i
-            id="prevBtn"
-            class="fa-regular fa-circle-chevron-left carouselBtn right"
-          ></i>
-          <i
-            id="nextBtn"
-            class="fa-regular fa-circle-chevron-right carouselBtn right"
-          ></i>
-        </div>
-        <div id="display"></div>
+      <div class="thumbContainer">
+        <div id="thumbnail" class="item carouselSlide"></div>
       </div>
+      <div class="iconContainer">
+        <p id="prevBtn" class="btn">
+          <i class="fa-regular fa-circle-chevron-left carouselBtn right"></i>
+        </p>
+        <p id="nextBtn" class="btn">
+          <i class="fa-regular fa-circle-chevron-right carouselBtn right"></i>
+        </p>
+      </div>
+
+      <div id="display"></div>
       <form id="searchImg">
-        <input name="query" />
+        <input class="queryInput" name="query" />
       </form>
     </div>
   </body>
