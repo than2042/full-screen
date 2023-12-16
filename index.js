@@ -39,7 +39,6 @@ const displayImages = () => {
 };
 
 const showImage = (index) => {
-  //   const slides = document.querySelectorAll(".thumbnail");
   const displayImage = document.getElementById("display");
 
   const newIndex = index <= 0 ? 0 : index;
@@ -57,6 +56,7 @@ const showImage = (index) => {
   image.classList.add("display");
   p.classList.add("description");
 
+  // voice over attribute
   displayImage.setAttribute("role", "status");
   displayImage.setAttribute("aria-live", "assertive");
   displayImage.setAttribute("aria-atomic", "true");
@@ -64,10 +64,7 @@ const showImage = (index) => {
   displayImage.appendChild(image);
   displayImage.appendChild(p);
 };
-// showImage(currentImg);
 
-// const slider = document.querySelector(".thumbContainer");
-// const sildes = document.querySelectorAll(".item");
 const prevButton = document.getElementById("prevBtn");
 const nextButton = document.getElementById("nextBtn");
 prevButton.addEventListener("click", function () {
